@@ -1,0 +1,32 @@
+package trial;
+
+/**
+ *
+ * @author nyanc
+ */
+public class ClassAdministrator extends SchoolEmployee {
+//atribute
+    protected String Title;
+    //constructor
+    ClassAdministrator(String empName,int staffId,int yrsWorked,String title){
+        super( empName,staffId,yrsWorked);{
+        this.Title=title;
+    }
+        //accessor method
+       public String getTitle()
+       {
+           return Title;
+       }
+    @Override
+        public int getHours(){
+            return(super.getHours()+25);
+        }
+    @Override
+       public int getSalary(){
+           int Salary=super.getSalary();
+           return(Salary+60000+2000*this.yrsWorked);
+       }
+    }
+    
+    
+
